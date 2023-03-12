@@ -195,7 +195,8 @@ header .navbar-extra a:hover {
 .services,
 .project,
 .gallery,
-.contact {
+.contact,
+.passion {
   padding: 6rem 10% 1.4rem;
 }
 
@@ -203,7 +204,8 @@ header .navbar-extra a:hover {
 .services h2,
 .project h2,
 .gallery h2,
-.contact h2 {
+.contact h2,
+.passion h2 {
   font-size: 2rem;
   font-weight: 700;
   color: var(--color-white);
@@ -213,7 +215,8 @@ header .navbar-extra a:hover {
 .services h2 span,
 .project h2 span,
 .gallery h2 span,
-.contact h2 span {
+.contact h2 span,
+.passion h2 span {
   color: var(--color-blue);
 }
 
@@ -357,6 +360,70 @@ header .navbar-extra a:hover {
 
 .gallery-item .item img:hover {
   transform: translateY(-5px);
+}
+
+/* SECTION PASSION STYLE */
+.passion .passion-content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.passion .passion-content .img-nav {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-color: var(--color-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px 0 0 5px;
+}
+
+.passion .passion-content .img-nav ul li {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.passion .passion-content .img-nav ul li a {
+  text-decoration: none;
+  color: var(--color-white);
+  font-size: 2.3em;
+  font-weight: 700;
+  padding: 1rem;
+  transition: 0.2s ease;
+  display: inline-block;
+}
+
+.passion .passion-content .img-nav ul li a::after {
+  content: "";
+  display: block;
+  border-bottom: 3px solid var(--color-white);
+  transition: 0.2s linear;
+  transform: scaleX(0);
+}
+
+.passion .passion-content .img-nav ul li a:hover::after {
+  transform: scaleX(0.2);
+  transform-origin: 0 0;
+}
+
+.passion .passion-content .img-area {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  border-radius: 0 5px 5px 0;
+}
+
+.passion .passion-content .img-area .img-passion {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 3px solid var(--color-white);
+  border-radius: 0 5px 5px 0;
 }
 
 /* SECTION CONTACT STYLE */
@@ -543,6 +610,18 @@ footer .sosmed-footer a {
   .gallery-item {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .passion .passion-content .img-nav {
+    width: 100%;
+  }
+
+  .passion .passion-content .img-area {
+    width: 100%;
+  }
+
+  .passion .passion-content {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 599px) {
@@ -577,5 +656,17 @@ footer .sosmed-footer a {
 
   .gallery-item {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .passion .passion-content .img-nav {
+    width: 100%;
+  }
+
+  .passion .passion-content .img-area {
+    width: 100%;
+  }
+
+  .passion .passion-content {
+    flex-direction: column;
   }
 }

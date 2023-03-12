@@ -42,6 +42,11 @@ filterButtonContainer.addEventListener("click", (e) => {
   }
 });
 
+// Hover on img
+function changeImg(e) {
+  document.querySelector(".img-passion").src = e;
+}
+
 // Smoke text
 textSmoke.innerHTML = textSmoke.textContent.replace(/\S/g, "<small>$&</small>");
 
