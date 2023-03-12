@@ -238,10 +238,21 @@ header .navbar-extra a:hover {
   margin: 0 auto;
 }
 
-.about .about-content .about-text p {
+.about .about-content .about-text .text {
   text-align: justify;
   font-weight: 200;
   color: var(--color-white);
+  user-select: none;
+  font-size: 1.2rem;
+}
+
+.about .about-content .about-text .text small {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.about .about-content .about-text .text small.active {
+  animation: smoke 0.8s linear forwards;
 }
 
 .about .about-content .about-text .btn-cv {
@@ -454,10 +465,37 @@ footer .sosmed-footer a {
   }
 }
 
+@keyframes smoke {
+  0% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    opacity: 1;
+    pointer-events: none;
+  }
+  100% {
+    opacity: 0;
+    filter: blur(1rem);
+    transform: translateX(2rem) translateY(-2rem);
+  }
+}
+
 /* Responsive Style */
 @media (max-width: 1366px) {
   html {
     font-size: 100%;
+  }
+}
+
+@media (max-width: 1150px) {
+  .about .about-content {
+    flex-direction: column;
+  }
+
+  .services .service-content {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -496,14 +534,6 @@ footer .sosmed-footer a {
   header nav a:hover::after {
     transform-origin: 0 0;
     transform: scaleX(0.1);
-  }
-
-  .about .about-content {
-    flex-direction: column;
-  }
-
-  .services .service-content {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .button-gallery ul {

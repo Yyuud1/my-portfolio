@@ -4,6 +4,7 @@ const filterButtonContainer = document.querySelector(".filter-button");
 const galleryItems = document.querySelectorAll(".item");
 const audio = document.querySelector("audio");
 const musicLogo = document.querySelector("#music");
+const textSmoke = document.querySelector(".text");
 
 window.addEventListener("scroll", () => {
   const header = document.querySelector("header");
@@ -15,14 +16,14 @@ btnMenu.addEventListener("click", () => {
   navbar.classList.toggle("active");
 });
 
-// Klik selain sidebar
+// click other sidebar
 document.addEventListener("click", (e) => {
   if (!btnMenu.contains(e.target) && !navbar.contains(e.target)) {
     navbar.classList.remove("active");
   }
 });
 
-// Filterd project
+// Filterd Gallery
 filterButtonContainer.addEventListener("click", (e) => {
   if (e.target.classList.contains("list")) {
     filterButtonContainer.querySelector(".active").classList.remove("active");
@@ -40,6 +41,16 @@ filterButtonContainer.addEventListener("click", (e) => {
     });
   }
 });
+
+// Smoke text
+textSmoke.innerHTML = textSmoke.textContent.replace(/\S/g, "<small>$&</small>");
+
+const letters = document.querySelectorAll("small");
+for (let i = 0; i < letters.length; i++) {
+  letters[i].addEventListener("mouseover", () => {
+    letters[i].classList.add("active");
+  });
+}
 
 // audio
 musicLogo.addEventListener("click", () => {
