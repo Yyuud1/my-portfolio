@@ -13,6 +13,12 @@
     <!-- Feather icons -->
     <script src="https://unpkg.com/feather-icons"></script>
 
+    <!-- CDN Font -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+
     <!-- Main CSS -->
     <link rel="stylesheet" href="src/style/main.css" />
   </head>
@@ -427,7 +433,7 @@
       <!-- ========= SECTION PASSION START ========= -->
       <section id="hobby" class="passion">
         <h2 data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
-          My <span>Hobby</span>.
+          My <span>interest</span>.
         </h2>
         <br />
 
@@ -444,6 +450,14 @@
                 <a
                   href="#"
                   id="changeImg"
+                  onmouseenter="changeImg('img/passion/eat.jpg')"
+                  >Eat</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  id="changeImg"
                   onmouseenter="changeImg('img/passion/sleep.jpg')"
                   >Sleep</a
                 >
@@ -452,32 +466,8 @@
                 <a
                   href="#"
                   id="changeImg"
-                  onmouseenter="changeImg('img/passion/img1.jpg')"
-                  >Drawing</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  id="changeImg"
-                  onmouseenter="changeImg('img/passion/read-book.jpg')"
-                  >Read Book</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  id="changeImg"
                   onmouseenter="changeImg('img/passion/gym.jpg')"
                   >Workout</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  id="changeImg"
-                  onmouseenter="changeImg('img/passion/img3.jpg')"
-                  >Chill</a
                 >
               </li>
             </ul>
@@ -490,11 +480,7 @@
             data-aos-once="true"
             class="img-area"
           >
-            <img
-              loading="lazy"
-              src="img/passion/sleep.jpg"
-              class="img-passion"
-            />
+            <img loading="lazy" src="img/passion/eat.jpg" class="img-passion" />
           </div>
         </div>
       </section>
@@ -600,6 +586,38 @@
         </div>
       </section>
       <!-- ========= SECTION TIPS END ========= -->
+
+      <!-- ========= SECTION COFFEE START ========= -->
+      <section class="coffee" id="coffee">
+        <h2>Buy me a <span>Coffee</span>.</h2>
+        <br />
+
+        <div class="coffee-content">
+          <div class="cup">
+            <img loading="lazy" src="img/coffee.gif" alt="coffee" />
+          </div>
+
+          <div class="coffee-text">
+            <p>
+              If u want. You can buy me a coffee or give me a tip. I would
+              really appreciate any gift you give
+              <i class="fas fa-money-bill-alt"></i>
+            </p>
+
+            <div class="account">
+              <h3>BRI</h3>
+              <span>0020 0102 4685 533. a/n Yuda Anugrah</span><br />
+
+              <h3>DANA</h3>
+              <span>082289675042. a/n Yuda Anugrah</span> <br />
+
+              <h3>GOPAY</h3>
+              <span>082289675042. a/n Yuda Anugrah</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ========= SECTION COFFEE END ========= -->
 
       <!-- ========= SECTION CONTACT START ========= -->
       <section class="contact" id="contact">

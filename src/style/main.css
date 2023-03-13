@@ -9,6 +9,8 @@
   --color-yellow: hsl(52, 75%, 60%);
   --color-black: #444;
   --color-white: #eff0f4;
+  --f9f9: #f9f9f9;
+  --d9d9: #d9d9d9;
 }
 
 * {
@@ -223,7 +225,8 @@ header .navbar-extra a:hover {
 .gallery,
 .contact,
 .passion,
-.tips {
+.tips,
+.coffee {
   padding: 6rem 10% 1.4rem;
 }
 
@@ -233,7 +236,8 @@ header .navbar-extra a:hover {
 .gallery h2,
 .contact h2,
 .passion h2,
-.tips h2 {
+.tips h2,
+.coffee h2 {
   font-size: 2.2rem;
   font-weight: 700;
   color: var(--color-white);
@@ -245,7 +249,8 @@ header .navbar-extra a:hover {
 .gallery h2 span,
 .contact h2 span,
 .passion h2 span,
-.tips h2 span {
+.tips h2 span,
+.coffee h2 span {
   color: var(--color-blue);
 }
 
@@ -428,7 +433,7 @@ header .navbar-extra a:hover {
 .passion .passion-content .img-nav ul li a {
   text-decoration: none;
   color: var(--color-white);
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
   padding: 1rem;
   transition: 0.2s ease;
@@ -539,6 +544,41 @@ header .navbar-extra a:hover {
 .tips .tips-content .tip-7 {
   grid-column: 2/5;
 }
+
+/* SECTION COFFEE STYLE */
+.coffee .coffee-content {
+  display: flex;
+  gap: 3rem;
+}
+
+.coffee .coffee-content .coffee-text {
+  color: var(--color-white);
+  text-align: justify;
+  width: 100%;
+}
+
+.coffee .coffee-content .coffee-text p {
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--color-white);
+}
+
+.coffee .coffee-content .coffee-text .account {
+  margin: 1rem 0;
+}
+
+.coffee .coffee-content .coffee-text .account h3 {
+  margin: 6px 0;
+}
+
+.coffee .coffee-content .coffee-text .account h3 {
+  color: var(--color-blue);
+}
+
+.coffee .coffee-content .cup img {
+  width: 200px;
+}
+
+/* SECTION CONTACT STYLE */
 
 .contact .contact-content .contacts {
   color: var(--color-white);
@@ -840,5 +880,9 @@ footer .sosmed-footer a {
 
   .tips .tips-content .tip-7 {
     grid-column: 1/1;
+  }
+
+  .coffee .coffee-content {
+    flex-direction: column;
   }
 }
