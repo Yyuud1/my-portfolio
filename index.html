@@ -20,7 +20,7 @@
     <!-- ========= HEADER START ========= -->
     <header>
       <div class="logo">
-        <h2>Yd<span>.</span></h2>
+        <h2><a href="#home">Yd</a><span>.</span></h2>
       </div>
 
       <nav>
@@ -74,8 +74,10 @@
           class="home-intro"
         >
           <img src="img/yuda-hero.jpg" loading="lazy" alt="yuda" />
-          <h2>Yuda Anugrah</h2>
-          <p>I'm Front-End Web Developerr</p>
+          <div class="home-text-h2">
+            <h2>Yuda Anugrah</h2>
+          </div>
+          <p>I'm Front-End Web Developer</p>
           <br />
           <a
             href="https://www.linkedin.com/in/yuda-anugrah-6314bb24b/"
@@ -256,6 +258,16 @@
             </p>
           </div>
         </div>
+        <br />
+        <p
+          data-aos="fade-up"
+          data-aos-delay="600"
+          data-aos-duration="500"
+          data-aos-once="true"
+          class="text-services"
+        >
+          and I can do other <span>things</span>.
+        </p>
       </section>
       <!-- ========= SECTION SERVICES END ========= -->
 
@@ -351,6 +363,34 @@
             <div class="item certificate">
               <img
                 loading="lazy"
+                src="img/certificate/fundamental.jpg"
+                alt="Fundamental"
+              />
+              <a
+                href="https://www.dicoding.com/certificates/72ZDOGL3QXYW"
+                target="_blank"
+                rel="noopener"
+                >Fundamental Front-End Web</a
+              >
+            </div>
+
+            <div class="item certificate">
+              <img
+                loading="lazy"
+                src="img/certificate/microsoft-azure.jpg"
+                alt="microsoft-azure"
+              />
+              <a
+                href="https://www.credly.com/badges/2902acaf-ec65-4aaa-a7e2-bbb7795a397e"
+                target="_blank"
+                rel="noopener"
+                >Microsoft Certified Fundamental</a
+              >
+            </div>
+
+            <div class="item certificate">
+              <img
+                loading="lazy"
                 src="img/certificate/best-capstone.jpg"
                 alt="best-capstone"
               />
@@ -374,25 +414,10 @@
 
             <div class="item certificate">
               <img
-                loading="lazy"
-                src="img/certificate/microsoft-azure.jpg"
-                alt="microsoft-azure"
+                src="img/certificate/karya-ilmiah.jpeg"
+                alt="Penulisan karya"
               />
-              <a
-                href="https://www.credly.com/badges/2902acaf-ec65-4aaa-a7e2-bbb7795a397e"
-                target="_blank"
-                rel="noopener"
-                >Microsoft Certified Fundamental</a
-              >
-            </div>
-
-            <div class="item certificate">
-              <img
-                loading="lazy"
-                src="img/certificate/vaksin-booster.jpeg"
-                alt="vaksin-booster"
-              />
-              <a href="#" target="_blank" rel="noopener">Vaksin Booster</a>
+              <a href="#" target="_blank" rel="noopener">Scientific Writing</a>
             </div>
           </div>
         </div>
@@ -400,41 +425,181 @@
       <!-- ========= SECTION GALLERY END ========= -->
 
       <!-- ========= SECTION PASSION START ========= -->
-      <section class="passion">
-        <h2>My <span>Hobby</span>.</h2>
+      <section id="hobby" class="passion">
+        <h2 data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+          My <span>Hobby</span>.
+        </h2>
         <br />
 
         <div class="passion-content">
-          <div class="img-nav">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="500"
+            data-aos-once="true"
+            class="img-nav"
+          >
             <ul>
               <li>
-                <a href="#" onmouseenter="changeImg('img/passion/img1.jpg')"
-                  >Design</a
+                <a
+                  href="#"
+                  id="changeImg"
+                  onmouseenter="changeImg('img/passion/sleep.jpg')"
+                  >Sleep</a
                 >
               </li>
               <li>
-                <a href="#" onmouseenter="changeImg('img/passion/img2.jpg')"
+                <a
+                  href="#"
+                  id="changeImg"
+                  onmouseenter="changeImg('img/passion/img1.jpg')"
+                  >Drawing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  id="changeImg"
+                  onmouseenter="changeImg('img/passion/read-book.jpg')"
                   >Read Book</a
                 >
               </li>
               <li>
-                <a href="#" onmouseenter="changeImg('img/passion/img3.jpg')"
+                <a
+                  href="#"
+                  id="changeImg"
+                  onmouseenter="changeImg('img/passion/gym.jpg')"
+                  >Workout</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  id="changeImg"
+                  onmouseenter="changeImg('img/passion/img3.jpg')"
                   >Chill</a
                 >
               </li>
             </ul>
           </div>
 
-          <div class="img-area">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="400"
+            data-aos-duration="500"
+            data-aos-once="true"
+            class="img-area"
+          >
             <img
               loading="lazy"
-              src="img/passion/img1.jpg"
+              src="img/passion/sleep.jpg"
               class="img-passion"
             />
           </div>
         </div>
       </section>
       <!-- ========= SECTION PASSION END ========= -->
+
+      <!-- ========= SECTION TIPS START ========= -->
+      <section class="tips" id="tips">
+        <h2 data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+          Some <span>Quote</span>.
+        </h2>
+        <br />
+
+        <div class="tips-content">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-once="true"
+            class="tips-box tip-1"
+          >
+            <img src="img/tips/frontend.png" width="65" alt="frontend" />
+            <p>
+              Any fool can write code that a computer can understand. Good
+              programmers write code that humans can understand.
+            </p>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="500"
+            data-aos-once="true"
+            class="tips-box tip-2"
+          >
+            <div>
+              <img src="img/tips/trash.png" width="65" alt="trash" />
+              <p>keep clean, because cleanliness is part of faith.</p>
+            </div>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-delay="400"
+            data-aos-duration="500"
+            data-aos-once="true"
+            class="tips-box tip-3"
+          >
+            <img src="img/tips/book.png" width="65" alt="book" />
+            <p>
+              Books are valuable friends. However, it is difficult to explain
+              that to those who do not like to read.
+            </p>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-delay="600"
+            data-aos-duration="500"
+            data-aos-once="true"
+            v
+            class="tips-box tip-4"
+          >
+            <div>
+              <img src="img/tips/family.png" width="65" alt="family" />
+              <p>
+                Family, like a branch of a tree, we all grow in different
+                directions, but our roots are still one.
+              </p>
+            </div>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-delay="800"
+            data-aos-duration="500"
+            data-aos-once="true"
+            class="tips-box tip-5"
+          >
+            <img src="img/tips/guitar.png" width="65" alt="guitar" />
+            <p>
+              Music is the rhythm of life and Music is a beauty that is not
+              visible, but is felt to the soul.
+            </p>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-delay="1000"
+            data-aos-duration="500"
+            data-aos-once="true"
+            class="tips-box tip-6"
+          >
+            <img src="img/tips/gym.png" width="65" alt="gym" />
+            <p>
+              Sweat is a miracle. Wrap yourself in it every day to make your
+              wish come true.
+            </p>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-delay="1200"
+            data-aos-duration="500"
+            data-aos-once="true"
+            class="tips-box tip-7"
+          >
+            <img src="img/tips/cough.png" width="65" alt="cough" />
+            <p>It is health that is true wealth, not just gold and silver.</p>
+          </div>
+        </div>
+      </section>
+      <!-- ========= SECTION TIPS END ========= -->
 
       <!-- ========= SECTION CONTACT START ========= -->
       <section class="contact" id="contact">
@@ -521,7 +686,7 @@
     </footer>
 
     <audio id="music" controls>
-      <source src="music.mp3" type="audio/mp3" />
+      <source src="song/lofi.mp3" type="audio/mp3" />
     </audio>
 
     <!-- Main Script -->

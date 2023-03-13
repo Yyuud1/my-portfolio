@@ -12,7 +12,8 @@ window.addEventListener("scroll", () => {
 });
 
 // Sidebar active
-btnMenu.addEventListener("click", () => {
+btnMenu.addEventListener("click", (e) => {
+  e.preventDefault();
   navbar.classList.toggle("active");
 });
 
@@ -42,9 +43,15 @@ filterButtonContainer.addEventListener("click", (e) => {
   }
 });
 
-// Hover on img
+// Hover on img hobby
 function changeImg(e) {
   document.querySelector(".img-passion").src = e;
+}
+const changeImage = document.querySelectorAll("#changeImg");
+for (let i = 0; i < changeImage.length; i++) {
+  changeImage[i].addEventListener("click", (e) => {
+    e.preventDefault();
+  });
 }
 
 // Smoke text
@@ -58,7 +65,8 @@ for (let i = 0; i < letters.length; i++) {
 }
 
 // audio
-musicLogo.addEventListener("click", () => {
+musicLogo.addEventListener("click", (e) => {
+  e.preventDefault();
   if (audio.paused) {
     audio.play();
   } else {
