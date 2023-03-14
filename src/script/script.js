@@ -43,6 +43,24 @@ filterButtonContainer.addEventListener("click", (e) => {
   }
 });
 
+// Video Filtered
+let mainVideo = document.querySelector(".main-video video");
+let listVideo = document.querySelectorAll(".list-video .child-video");
+let titleVideo = document.querySelector(".main-video .title-video");
+
+listVideo.forEach((vid) => {
+  vid.onclick = () => {
+    listVideo.forEach((vid) => vid.classList.remove("active"));
+    vid.classList.add("active");
+
+    if (vid.classList.contains("active")) {
+      let source = vid.children[0].getAttribute("src");
+      mainVideo.src = source;
+      let text = vid.children[1].innerHTML;
+      titleVideo.innerHTML = text;
+    }
+  };
+});
 // Hover on img hobby
 function changeImg(e) {
   document.querySelector(".img-passion").src = e;

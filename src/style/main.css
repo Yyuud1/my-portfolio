@@ -213,7 +213,8 @@ header .navbar-extra a:hover {
 .contact,
 .passion,
 .tips,
-.coffee {
+.coffee,
+.video-gallery {
   padding: 6rem 10% 1.4rem;
 }
 
@@ -224,7 +225,8 @@ header .navbar-extra a:hover {
 .contact h2,
 .passion h2,
 .tips h2,
-.coffee h2 {
+.coffee h2,
+.video-gallery h2 {
   font-size: 2.2rem;
   font-weight: 700;
   color: var(--color-white);
@@ -237,7 +239,8 @@ header .navbar-extra a:hover {
 .contact h2 span,
 .passion h2 span,
 .tips h2 span,
-.coffee h2 span {
+.coffee h2 span,
+.video-gallery h2 span {
   color: var(--color-blue);
 }
 
@@ -310,6 +313,11 @@ header .navbar-extra a:hover {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+}
+
+.services .count-api {
+  text-align: center;
+  color: var(--color-white);
 }
 
 .services .text-services {
@@ -394,6 +402,77 @@ header .navbar-extra a:hover {
 
 .gallery-item .item img:hover {
   transform: translateY(-5px);
+}
+
+/* SECTION VIDEO GALLERY STYLE */
+.video-gallery .video-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.video-gallery .video-content .main-video {
+  background: var(--color-white);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.video-gallery .video-content .main-video .video {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.video-gallery .video-content .main-video .video video {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.video-gallery .video-content .main-video .title-video {
+  color: var(--color-black);
+  font-size: 22px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.video-gallery .video-content .list-video {
+  background: var(--color-white);
+  border-radius: 5px;
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.video-gallery .video-content .list-video .child-video {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.video-gallery .video-content .list-video .child-video:hover {
+  background: #ddd;
+}
+
+.video-gallery .video-content .list-video .child-video video {
+  width: 100px;
+  border-radius: 5px;
+}
+
+.video-gallery .video-content .list-video .child-video .title-video {
+  color: var(--color-black);
+  font-size: 17px;
+}
+
+.video-gallery .video-content .list-video .child-video.active {
+  background: var(--color-blue);
+}
+
+.video-gallery .video-content .list-video .child-video.active .title-video {
+  color: var(--color-white);
 }
 
 /* SECTION PASSION STYLE */
@@ -506,6 +585,7 @@ header .navbar-extra a:hover {
   background-color: var(--color-white);
   z-index: -99;
   transition: 0.3s;
+  border-radius: 5px;
 }
 
 .tips .tips-content .tips-box:hover::after {
@@ -734,6 +814,10 @@ footer .sosmed-footer a {
 
   .tips .tips-content .tip-7 {
     grid-column: 2/3;
+  }
+
+  .video-gallery .video-content {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
