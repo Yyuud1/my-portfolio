@@ -1,4 +1,15 @@
 const navbar = document.querySelector("nav");
+const navbarA = document.querySelectorAll("header a");
+const homeA = document.querySelectorAll(".home a");
+const homeP = document.querySelectorAll(".home p");
+const homeTitle = document.querySelectorAll("h2");
+const aboutP = document.querySelector(".about p");
+const aboutA = document.querySelectorAll(".about .sosmed-about a");
+const aboutH3 = document.querySelector(".about h3");
+const countApi = document.querySelector(".count-api");
+const apiH3 = document.querySelector(".count-api h3");
+const span = document.querySelectorAll("span");
+const paragraf = document.querySelectorAll("p");
 const btnMenu = document.getElementById("btn-menu");
 const filterButtonContainer = document.querySelector(".filter-button");
 const galleryItems = document.querySelectorAll(".item");
@@ -23,6 +34,86 @@ document.addEventListener("click", (e) => {
     navbar.classList.remove("active");
   }
 });
+
+// Background Mode
+const toggleMode = document.querySelector("#toggle-mode");
+let theme = localStorage.getItem("theme");
+
+if (!theme) {
+  localStorage.setItem("theme", "dark");
+}
+
+const whiteMode = () => {
+  document.body.classList.add("white-mode");
+  localStorage.setItem("theme", "white");
+  navbarA.forEach((nava) => {
+    nava.style.color = "#333";
+  });
+  homeA.forEach((homeA) => {
+    homeA.style.color = "#333";
+  });
+  homeA[3].style.color = "#eff0f4";
+  // homeA[3].style.background = "hsl(352, 75%, 60%)";
+  homeP.forEach((homep) => {
+    homep.style.color = "#333";
+  });
+  homeTitle.forEach((hometit) => {
+    hometit.style.color = "#333";
+  });
+  aboutP.style.color = "#444";
+  aboutA.forEach((abota) => {
+    abota.style.color = "#444";
+  });
+  aboutH3.style.color = "#444";
+  apiH3.style.color = "#444";
+  countApi.style.color = "#444";
+  span.forEach((sp) => {
+    sp.style.color = "#444";
+  });
+};
+
+const darkMode = () => {
+  document.body.classList.remove("white-mode");
+  localStorage.setItem("theme", "dark");
+  navbarA.forEach((nava) => {
+    nava.style.color = "#eff0f4";
+  });
+  homeA.forEach((homeA) => {
+    homeA.style.color = "#eff0f4";
+  });
+  homeA[3].style.background = "hsl(252, 75%, 60%)";
+  homeP.forEach((homep) => {
+    homep.style.color = "#eff0f4";
+  });
+  homeTitle.forEach((hometit) => {
+    hometit.style.color = "#eff0f4";
+  });
+  aboutP.style.color = "#eff0f4";
+  aboutA.forEach((abota) => {
+    abota.style.color = "#eff0f4";
+  });
+  aboutH3.style.color = "#eff0f4";
+  apiH3.style.color = "#eff0f4";
+  countApi.style.color = "#eff0f4";
+  span.forEach((sp) => {
+    sp.style.color = "#eff0f4";
+  });
+};
+
+toggleMode.addEventListener("click", (e) => {
+  theme = localStorage.getItem("theme");
+  if (theme === "dark") {
+    whiteMode();
+  } else {
+    darkMode();
+  }
+
+  e.preventDefault();
+});
+
+if (theme === "white") {
+  whiteMode();
+}
 
 // Filterd Gallery
 filterButtonContainer.addEventListener("click", (e) => {

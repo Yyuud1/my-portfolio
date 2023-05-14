@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200&display=swap");
 
 :root {
-  --background: hsl(252, 30%, 17%);
+  --background: hsl(254, 30%, 17%);
 
   --color-blue: hsl(252, 75%, 60%);
   --color-bluesoft: hsl(202, 75%, 60%);
@@ -27,8 +27,8 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  /* height: 4000px; */
   background-color: var(--background);
+  transition: 0.3s ease-in-out;
 }
 
 /* SCROOLBAR CUSTOM */
@@ -44,6 +44,14 @@ body {
   background-color: var(--color-blue);
   border-radius: 5px;
   border: 3px solid #ddd;
+}
+
+.dark-mode {
+  background: var(--background);
+}
+
+.white-mode {
+  background: var(--color-white);
 }
 
 audio {
